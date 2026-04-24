@@ -1,0 +1,7 @@
+src/
+scaffold*.py
+tsconfig.json
+tsup.config.ts
+.env*
+reports/
+node_modules/
