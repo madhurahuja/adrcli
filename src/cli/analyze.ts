@@ -32,10 +32,11 @@ function getStepEmoji(stepName: string): string {
 
 function printProviderBox(id: string, model?: string, baseUrl?: string): void {
   const W = 36
-  const row = (label: string, value: string): string =>
-    chalk.dim('\u2502') +
-    `  ${chalk.dim(label.padEnd(8))} ${chalk.white(value)}`.padEnd(W + 12) +
-    chalk.dim('\u2502')
+  const row = (label: string, value: string): string => {
+    const raw = `  ${label.padEnd(8)} ${value}`
+    const padding = ' '.repeat(Math.max(0, W - raw.length))
+    return chalk.dim('\u2502') + `  ${chalk.dim(label.padEnd(8))} ${chalk.white(value)}` + padding + chalk.dim('\u2502')
+  }
 
   console.log()
   console.log(chalk.dim('\u250c\u2500 Provider ' + '\u2500'.repeat(W - 11) + '\u2510'))
@@ -133,10 +134,14 @@ export async function analyzeCommand(
       sectionData: new Map(),
     }
 
+    let prevDisplay = ''
     await runWorkflow(context, provider, (step, total, current) => {
+      if (prevDisplay) spinner.succeed(chalk.dim(prevDisplay))
       const emoji = getStepEmoji(step)
-      spinner.start(`${emoji}  [${current}/${total}] ${step}...`)
+      prevDisplay = `${emoji}  [${current}/${total}] ${step}`
+      spinner.start(chalk.dim(prevDisplay + '...'))
     })
+    if (prevDisplay) spinner.succeed(chalk.dim(prevDisplay))
     spinner.succeed(chalk.green('Analysis complete'))
 
     if (context.recommended) {

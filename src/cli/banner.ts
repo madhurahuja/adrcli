@@ -21,8 +21,11 @@ export function printBanner(version: string): void {
   console.log(emptyLine)
 
   for (const line of ADR_ASCII) {
-    const padded = line.padEnd(BANNER_WIDTH, ' ')
-    console.log(chalk.cyan('\u2551') + chalk.bold.cyan(padded) + chalk.cyan('\u2551'))
+    const lineLen = line.length
+    const leftPad = Math.floor((BANNER_WIDTH - lineLen) / 2)
+    const rightPad = BANNER_WIDTH - lineLen - leftPad
+    const centered = ' '.repeat(Math.max(0, leftPad)) + line + ' '.repeat(Math.max(0, rightPad))
+    console.log(chalk.cyan('\u2551') + chalk.bold.cyan(centered) + chalk.cyan('\u2551'))
   }
 
   console.log(emptyLine)
