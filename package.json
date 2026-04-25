@@ -1,6 +1,6 @@
 {
   "name": "@madhurahuja/adrcli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI-powered Architecture Decision Record CLI for AI Architects",
   "type": "module",
   "bin": {
