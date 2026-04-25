@@ -2,12 +2,16 @@
 
 > AI-powered Architecture Decision Record CLI for AI Architects
 
+[![npm](https://img.shields.io/npm/v/@madhurahuja/adrcli)](https://www.npmjs.com/package/@madhurahuja/adrcli)
+[![GitHub](https://img.shields.io/badge/github-adrcli-blue)](https://github.com/madhurahuja/adrcli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Analyze any business problem and generate a complete architecture report: candidates, pros/cons, cost/ROI, risk register, MADR ADR, implementation roadmap, and Mermaid diagrams.
 
 ## Install
 
 ```bash
-npm install -g adrcli
+npm install -g @madhurahuja/adrcli
 ```
 
 ## Quick Start

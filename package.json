@@ -4,7 +4,7 @@
   "description": "AI-powered Architecture Decision Record CLI for AI Architects",
   "type": "module",
   "bin": {
-    "adrcli": "./dist/index.js"
+    "adrcli": "dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/cli/index.ts",
