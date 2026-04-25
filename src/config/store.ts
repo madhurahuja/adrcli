@@ -7,8 +7,9 @@ const CONFIG_DIR = path.join(os.homedir(), '.adrcli')
 const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json')
 
 const DEFAULTS: AdrcliConfig = {
-  provider: 'claude',
-  model: 'claude-sonnet-4-6',
+  provider: 'ollama',
+  model: 'llama3',
+  ollamaUrl: 'http://localhost:11434',
 }
 
 export function loadConfig(): AdrcliConfig {

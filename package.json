@@ -1,7 +1,8 @@
 {
   "name": "@madhurahuja/adrcli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "AI-powered Architecture Decision Record CLI for AI Architects",
+  "license": "MIT",
   "type": "module",
   "bin": {
     "adrcli": "dist/index.js"
