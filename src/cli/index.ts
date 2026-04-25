@@ -10,7 +10,7 @@ import { analyzeCommand } from './analyze.js'
 import { registerConfigCommand } from './config.js'
 import { printBanner } from './banner.js'
 
-const VERSION = '0.1.2'
+const VERSION = '0.1.3'
 
 const program = new Command()
 
