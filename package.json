@@ -7,6 +7,10 @@
   "bin": {
     "adrcli": "dist/index.js"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"     
+  },
   "scripts": {
     "dev": "tsx src/cli/index.ts",
     "build": "tsup",
