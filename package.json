@@ -9,7 +9,7 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
-    "access": "public"     
+    "access": "public"
   },
   "scripts": {
     "dev": "tsx src/cli/index.ts",
