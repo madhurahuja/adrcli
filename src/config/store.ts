@@ -34,6 +34,7 @@ export function getApiKey(provider: AdrcliConfig['provider']): string {
     claude: process.env['ANTHROPIC_API_KEY'],
     openai: process.env['OPENAI_API_KEY'],
     ollama: 'not-required',
+    unsloth: 'not-required',
   }
   const key = envMap[provider] ?? config.apiKey
   if (!key) {

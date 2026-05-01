@@ -84,9 +84,10 @@ export interface LLMOptions {
 }
 
 export interface AdrcliConfig {
-  provider: 'claude' | 'openai' | 'ollama'
+  provider: 'claude' | 'openai' | 'ollama' | 'unsloth'
   model?: string
   apiKey?: string
   ollamaUrl?: string
+  unslothUrl?: string
   outputDir?: string
 }

@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { saveConfig, loadConfig } from '../config/store.js'
 import type { AdrcliConfig } from '../types.js'
 
-const VALID_KEYS: (keyof AdrcliConfig)[] = ['provider', 'model', 'apiKey', 'ollamaUrl', 'outputDir']
+const VALID_KEYS: (keyof AdrcliConfig)[] = ['provider', 'model', 'apiKey', 'ollamaUrl', 'unslothUrl', 'outputDir']
 
 export function registerConfigCommand(program: Command): void {
   const cfg = program.command('config').description('Manage adrcli configuration')
